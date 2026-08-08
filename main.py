@@ -1,27 +1,18 @@
-tareas = []
+def mostrar_progreso():
+    total = len(tareas)
 
-def mostrar_menu():
-    print("\nGESTOR DE TAREAS")
-    print("1. Agregar tarea")
-    print("2. Listar tareas")
-    print("3. Mostrar progreso")
-    print("4. Salir")
-
-def agregar_tarea():
-
-    nombre = input("Ingrese el nombre de la tarea: ")
-
-    if nombre == "":
-        print("Debe ingresar una tarea")
+    if total == 0:
+        print("Sin tareas")
         return
 
-    tarea = {
-        "nombre": nombre,
-        "completada": False
-    }
+    completadas = 0
 
-    tareas.append(tarea)
+    for tarea in tareas:
+        if tarea["completada"]:
+            completadas += 1
 
-    print("Tarea agregada:", nombre)
-    print("Total de tareas:", len(tareas))
+    porcentaje = (
+        completadas * 100 / total
+    )
 
+    print(porcentaje, "%")
