@@ -11,6 +11,10 @@ def agregar_tarea():
 
     nombre = input("Tarea: ")
 
+    if nombre == "":
+        print("Debe ingresar una tarea")
+        return
+
     tarea = {
         "nombre": nombre,
         "completada": False
