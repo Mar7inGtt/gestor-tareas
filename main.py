@@ -22,4 +22,6 @@ def agregar_tarea():
 
     tareas.append(tarea)
 
-    print("Tarea agregada")
+    print("Tarea agregada:", nombre)
+
+    
