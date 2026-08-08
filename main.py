@@ -9,7 +9,7 @@ def mostrar_menu():
 
 def agregar_tarea():
 
-    nombre = input("Tarea: ")
+    nombre = input("Ingrese el nombre de la tarea: ")
 
     if nombre == "":
         print("Debe ingresar una tarea")
